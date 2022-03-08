@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1646702777834,
+  "lastUpdate": 1646705502497,
   "repoUrl": "https://github.com/ibis-project/ibis",
   "entries": {
     "Benchmark": [
@@ -35668,6 +35668,247 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.625751023758793e-7",
             "extra": "mean: 2.99200673017128 usec\nrounds: 27933"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ibis-squawk-bot[bot]@users.noreply.github.com",
+            "name": "ibis-squawk-bot[bot]",
+            "username": "ibis-squawk-bot[bot]"
+          },
+          "committer": {
+            "email": "96536427+ibis-squawk-bot[bot]@users.noreply.github.com",
+            "name": "ibis-squawk-bot[bot]",
+            "username": "ibis-squawk-bot[bot]"
+          },
+          "distinct": true,
+          "id": "0eb9bc50738d9b306a9f29e7bb3cae60c7f01f84",
+          "message": "chore(conda-lock): relock",
+          "timestamp": "2022-03-08T02:08:47Z",
+          "tree_id": "33923886bd47d634acc185126364fbca3f60d871",
+          "url": "https://github.com/ibis-project/ibis/commit/0eb9bc50738d9b306a9f29e7bb3cae60c7f01f84"
+        },
+        "date": 1646705500688,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[low_card_window_analytics_udf]",
+            "value": 38.736761575014896,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0014897281874057787",
+            "extra": "mean: 25.815271058822773 msec\nrounds: 34"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[low_card_grouped_rolling]",
+            "value": 23.255219260540354,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0017846354508723576",
+            "extra": "mean: 43.00109961538003 msec\nrounds: 13"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[simple_sort]",
+            "value": 63.987462893738645,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0007257976216642071",
+            "extra": "mean: 15.628061416666245 msec\nrounds: 48"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_builtins[str-small]",
+            "value": 9230.348624429991,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014324284494028953",
+            "extra": "mean: 108.33826984100006 usec\nrounds: 315"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[multikey_sort_projection]",
+            "value": 34.82084561761606,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0011738699698105144",
+            "extra": "mean: 28.71842950000314 msec\nrounds: 10"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[low_card_grouped_rolling_udf_mean]",
+            "value": 1.7732685528776457,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00735363282389258",
+            "extra": "mean: 563.930375000001 msec\nrounds: 5"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_compile[large-sqlite]",
+            "value": 92.61116715618125,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0007508896098583866",
+            "extra": "mean: 10.797833897434645 msec\nrounds: 78"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[high_card_window_analytics_udf]",
+            "value": 0.12615402929665775,
+            "unit": "iter/sec",
+            "range": "stddev: 0.03380707156129633",
+            "extra": "mean: 7.926817760600005 sec\nrounds: 5"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_compile[medium-impala]",
+            "value": 211.15569455469566,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0003423194991862385",
+            "extra": "mean: 4.735841967742765 msec\nrounds: 186"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[high_card_grouped_rolling]",
+            "value": 2.529252008460362,
+            "unit": "iter/sec",
+            "range": "stddev: 0.007686789374428371",
+            "extra": "mean: 395.3738087999909 msec\nrounds: 5"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_construction[small]",
+            "value": 31.50579796473856,
+            "unit": "iter/sec",
+            "range": "stddev: 0.027253847905967903",
+            "extra": "mean: 31.74018957143078 msec\nrounds: 84"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[cast_to_dates_from_strings]",
+            "value": 72.2962403771284,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0010639138187343476",
+            "extra": "mean: 13.831977911763715 msec\nrounds: 34"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_construction[large]",
+            "value": 35.23704313585328,
+            "unit": "iter/sec",
+            "range": "stddev: 0.02001721657079012",
+            "extra": "mean: 28.379225695657524 msec\nrounds: 46"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_compile[large-impala]",
+            "value": 141.6355001904904,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005883149963411364",
+            "extra": "mean: 7.060376802814732 msec\nrounds: 142"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_builtins[str-large]",
+            "value": 69.31775510662814,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0009251859004924334",
+            "extra": "mean: 14.426318314286846 msec\nrounds: 70"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_builtins[hash-medium]",
+            "value": 330503.7662759005,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017384555267064968",
+            "extra": "mean: 3.025684128407821 usec\nrounds: 59521"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_compile[medium-sqlite]",
+            "value": 154.38533937037363,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00028526420194227673",
+            "extra": "mean: 6.477298972028551 msec\nrounds: 143"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[multikey_group_by_with_mutate]",
+            "value": 88.82661321254608,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0004967699117492832",
+            "extra": "mean: 11.257887291134022 msec\nrounds: 79"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[high_card_grouped_rolling_udf_wm]",
+            "value": 0.7445487964477134,
+            "unit": "iter/sec",
+            "range": "stddev: 0.014975523427406101",
+            "extra": "mean: 1.3430953146000093 sec\nrounds: 5"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[multikey_sort]",
+            "value": 38.817376355271925,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0013284530569721079",
+            "extra": "mean: 25.76165866666531 msec\nrounds: 39"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_builtins[hash-small]",
+            "value": 304008.02979106584,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002507518602414205",
+            "extra": "mean: 3.289386799050227 usec\nrounds: 60238"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[low_card_grouped_rolling_udf_wm]",
+            "value": 0.7615807174040149,
+            "unit": "iter/sec",
+            "range": "stddev: 0.015460045289633371",
+            "extra": "mean: 1.3130584548000115 sec\nrounds: 5"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_builtins[hash-large]",
+            "value": 312241.43094979716,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000018242700947354465",
+            "extra": "mean: 3.202649939689721 usec\nrounds: 26524"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[simple_sort_projection]",
+            "value": 62.16421720557569,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0008615315403698477",
+            "extra": "mean: 16.086424714285748 msec\nrounds: 63"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_construction[medium]",
+            "value": 225.9051974506156,
+            "unit": "iter/sec",
+            "range": "stddev: 0.004297868309476538",
+            "extra": "mean: 4.426635647542402 msec\nrounds: 244"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_builtins[str-medium]",
+            "value": 263.35438381298803,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00022387767613791474",
+            "extra": "mean: 3.7971648146556594 msec\nrounds: 232"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[high_card_group_by]",
+            "value": 142.88759530335227,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005438790909358015",
+            "extra": "mean: 6.998508148149506 msec\nrounds: 135"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[cast_to_dates]",
+            "value": 708.2898739186447,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00009881795798615176",
+            "extra": "mean: 1.4118513292692667 msec\nrounds: 82"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_execute[high_card_grouped_rolling_udf_mean]",
+            "value": 1.0987537543322667,
+            "unit": "iter/sec",
+            "range": "stddev: 0.028105133953600796",
+            "extra": "mean: 910.1220323999883 msec\nrounds: 5"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_compile[small-sqlite]",
+            "value": 4968.491291187936,
+            "unit": "iter/sec",
+            "range": "stddev: 0.001526157520769461",
+            "extra": "mean: 201.26834111062837 usec\nrounds: 2143"
+          },
+          {
+            "name": "ibis/tests/benchmarks/test_benchmarks.py::test_compile[small-impala]",
+            "value": 20514.88965066434,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002386213558049988",
+            "extra": "mean: 48.745083060567026 usec\nrounds: 6730"
           }
         ]
       }
