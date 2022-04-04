@@ -1328,6 +1328,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.relations.TableExpr.alias" class="md-nav__link">
+    alias()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.relations.TableExpr.asof_join" class="md-nav__link">
     asof_join()
   </a>
@@ -1519,6 +1526,13 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.types.relations.TableExpr.sort_by" class="md-nav__link">
     sort_by()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.relations.TableExpr.sql" class="md-nav__link">
+    sql()
   </a>
   
 </li>
@@ -1964,6 +1978,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ibis.expr.types.relations.TableExpr.alias" class="md-nav__link">
+    alias()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ibis.expr.types.relations.TableExpr.asof_join" class="md-nav__link">
     asof_join()
   </a>
@@ -2155,6 +2176,13 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.types.relations.TableExpr.sort_by" class="md-nav__link">
     sort_by()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibis.expr.types.relations.TableExpr.sql" class="md-nav__link">
+    sql()
   </a>
   
 </li>
@@ -2449,6 +2477,88 @@ TableExpr            (<a class="autorefs autorefs-internal" title="ibis.expr.typ
 
   </div>
 
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.relations.TableExpr.alias" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">alias</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alias</span><span class="p">)</span></code>
+
+
+<a href="#ibis.expr.types.relations.TableExpr.alias" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Create a table expression with a specific name <code>alias</code>.</p>
+<p>This method is useful for exposing an ibis expression to the underlying
+backend for use in the
+<a class="autorefs autorefs-internal" href="#ibis.expr.types.relations.TableExpr.sql"><code>TableExpr.sql</code></a> method.</p>
+<div class="admonition note">
+<p class="admonition-title"><code>.alias</code> will create a temporary view</p>
+<p><code>.alias</code> creates a temporary view in the database.</p>
+<p>This side effect will be removed in a future version of ibis and
+<strong>is not part of the public API</strong>.</p>
+</div>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>alias</code></td>
+        <td><code>str</code></td>
+        <td><p>Name of the child expression</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;ci/ibis-testing-data/ibis_testing.ddb&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;functional_alltypes&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;my_t&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT sum(double_col) FROM my_t&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">AlchemyTable</span><span class="p">:</span> <span class="n">functional_alltypes</span>
+  <span class="n">index</span>           <span class="n">int64</span>
+    <span class="err">⋮</span>
+  <span class="n">month</span>           <span class="n">int32</span>
+<span class="n">r1</span> <span class="o">:=</span> <span class="n">View</span><span class="p">[</span><span class="n">r0</span><span class="p">]:</span> <span class="n">my_t</span>
+  <span class="n">schema</span><span class="p">:</span>
+    <span class="n">index</span>           <span class="n">int64</span>
+      <span class="err">⋮</span>
+    <span class="n">month</span>           <span class="n">int32</span>
+<span class="n">SQLStringView</span><span class="p">[</span><span class="n">r1</span><span class="p">]:</span> <span class="n">_ibis_view_0</span>
+  <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;SELECT sum(double_col) FROM my_t&#39;</span>
+  <span class="n">schema</span><span class="p">:</span>
+    <span class="nb">sum</span><span class="p">(</span><span class="n">double_col</span><span class="p">)</span> <span class="n">float64</span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TableExpr</code></td>
+      <td><p>An table expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
 
 
 
@@ -4121,6 +4231,81 @@ column/scalar-aggregate operations like</p>
 
   </div>
 
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h6 id="ibis.expr.types.relations.TableExpr.sql" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">query</span><span class="p">)</span></code>
+
+
+<a href="#ibis.expr.types.relations.TableExpr.sql" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
+
+    <div class="doc doc-contents ">
+
+      <p>Run a SQL query against a table expression.</p>
+<div class="admonition note">
+<p class="admonition-title">The SQL string is backend specific</p>
+<p><code>query</code> must be valid SQL for the execution backend the expression
+will run against</p>
+</div>
+<p>See <a class="autorefs autorefs-internal" href="#ibis.expr.types.relations.TableExpr.alias"><code>TableExpr.alias</code></a> for
+details on using named table expressions in a SQL string.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>query</code></td>
+        <td><code>str</code></td>
+        <td><p>Query string</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">con</span> <span class="o">=</span> <span class="n">ibis</span><span class="o">.</span><span class="n">duckdb</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;ci/ibis-testing-data/ibis_testing.ddb&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;functional_alltypes&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SELECT sum(double_col) FROM functional_alltypes&quot;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">expr</span>
+<span class="n">r0</span> <span class="o">:=</span> <span class="n">AlchemyTable</span><span class="p">:</span> <span class="n">functional_alltypes</span>
+  <span class="n">index</span>           <span class="n">int64</span>
+    <span class="err">⋮</span>
+  <span class="n">month</span>           <span class="n">int32</span>
+<span class="n">SQLStringView</span><span class="p">[</span><span class="n">r0</span><span class="p">]:</span> <span class="n">_ibis_view_1</span>
+  <span class="n">query</span><span class="p">:</span> <span class="s1">&#39;SELECT sum(double_col) FROM functional_alltypes&#39;</span>
+  <span class="n">schema</span><span class="p">:</span>
+    <span class="nb">sum</span><span class="p">(</span><span class="n">double_col</span><span class="p">)</span> <span class="n">float64</span>
+</code></pre></div>
+
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ir.TableExpr</code></td>
+      <td><p>An opaque table expression</p></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+  </div>
 
 
 
