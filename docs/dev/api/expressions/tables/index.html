@@ -3124,7 +3124,7 @@ as a scalar, all columns are filled with that value.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Get a reference to a single column from the table.</p>
+      <p>Get a reference to a single column from the table</p>
 
 <p><strong>Returns:</strong></p>
 <table>
@@ -3159,7 +3159,7 @@ as a scalar, all columns are filled with that value.</p></td>
 
     <div class="doc doc-contents ">
 
-      <p>Get multiple columns from the table.</p>
+      <p>Get multiple columns from the table</p>
 
 <p><strong>Examples:</strong></p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ibis</span>
@@ -3686,8 +3686,8 @@ columns.</p></td>
     <span class="n">baz</span><span class="p">:</span> <span class="mi">5</span>
     <span class="n">qux</span><span class="p">:</span> <span class="n">r0</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">r0</span><span class="o">.</span><span class="n">bar</span>
 </code></pre></div>
-    <p>Use the <a class="autorefs autorefs-internal" href="../generic/#ibis.expr.types.generic.ValueExpr.name"><code>ValueExpr.name</code></a>
-method to name the new columns.</p>
+    <p>Use the <a class="autorefs autorefs-internal" href="../generic/#ibis.expr.types.generic.ValueExpr.name"><code>name</code></a> method to name
+the new columns.</p>
     <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">new_columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">ibis</span><span class="o">.</span><span class="n">literal</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;baz&#39;</span><span class="p">,),</span>
 <span class="o">...</span>                <span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">table</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s1">&#39;qux&#39;</span><span class="p">)]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">expr2</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">mutate</span><span class="p">(</span><span class="n">new_columns</span><span class="p">)</span>
@@ -3987,7 +3987,7 @@ documentation for specifics.</p>
 
     <div class="doc doc-contents ">
 
-      <p>Return the table's schema.</p>
+      <p>Get the schema for this table (if one is known)</p>
 
 <p><strong>Returns:</strong></p>
 <table>

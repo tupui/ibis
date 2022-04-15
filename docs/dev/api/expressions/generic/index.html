@@ -1634,13 +1634,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#ibis.expr.types.generic.ValueExpr.type" class="md-nav__link">
-    type()
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2234,13 +2227,6 @@
           <li class="md-nav__item">
   <a href="#ibis.expr.types.generic.ValueExpr.name" class="md-nav__link">
     name()
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ibis.expr.types.generic.ValueExpr.type" class="md-nav__link">
-    type()
   </a>
   
 </li>
@@ -3847,7 +3833,8 @@ ValueExpr            (<a class="autorefs autorefs-internal" title="ibis.expr.typ
 
     <div class="doc doc-contents ">
 
-      <p>Base class for an expression having a known type.</p>
+      <p>Base class for a data generating expression having a fixed and known type,</p>
+<p>either a single value (scalar)</p>
 
 
 
@@ -3860,12 +3847,7 @@ ValueExpr            (<a class="autorefs autorefs-internal" title="ibis.expr.typ
 
 
 
-
 <h5 id="ibis.expr.types.generic.ValueExpr-methods">Methods<a href="#ibis.expr.types.generic.ValueExpr-methods" class="headerlink" title="Anchor link to this section for reference">&para;</a></h5>
-
-
-
-
 
   <div class="doc doc-object doc-method">
 
@@ -3894,7 +3876,7 @@ ValueExpr            (<a class="autorefs autorefs-internal" title="ibis.expr.typ
   <tbody>
       <tr>
         <td><code>name</code></td>
-        <td><code>str</code></td>
+        <td><code>None</code></td>
         <td><p>The new name of the expression</p></td>
         <td><em>required</em></td>
       </tr>
@@ -3928,40 +3910,6 @@ ValueExpr            (<a class="autorefs autorefs-internal" title="ibis.expr.typ
 
   </div>
 
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h6 id="ibis.expr.types.generic.ValueExpr.type" class="doc doc-heading">
-<code class="highlight language-python"><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
-
-
-<a href="#ibis.expr.types.generic.ValueExpr.type" class="headerlink" title="Anchor link to this section for reference">&para;</a></h6>
-
-    <div class="doc doc-contents ">
-
-      <p>Return the data type of an expression.</p>
-
-<p><strong>Returns:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>dt.DataType</code></td>
-      <td><p>Type of the expression</p></td>
-    </tr>
-  </tbody>
-</table>
-    </div>
-
-  </div>
 
 
 
