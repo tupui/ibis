@@ -1,8 +1,13 @@
-{ python ? "3.10", doCheck ? true }:
+{ python ? "3.10"
+, doCheck ? true
+}:
 let
   pkgs = import ./nix;
   drv =
-    { poetry2nix, python, lib }:
+    { poetry2nix
+    , python
+    , lib
+    }:
 
     let
       backends = [
