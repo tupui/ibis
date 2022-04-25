@@ -171,6 +171,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ibis-project.org/dev/blog/Ibis-version-3.0.0-release/</loc>
+         <lastmod>1980-01-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ibis-project.org/dev/community/coc/</loc>
          <lastmod>1980-01-01</lastmod>
          <changefreq>daily</changefreq>
